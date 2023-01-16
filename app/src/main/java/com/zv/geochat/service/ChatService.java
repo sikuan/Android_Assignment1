@@ -7,6 +7,7 @@ import android.os.Binder;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.os.PowerManager;
+import android.support.v4.app.NotificationCompat;
 import android.util.Log;
 
 import com.zv.geochat.notification.NotificationDecorator;
@@ -104,7 +105,6 @@ public class ChatService extends Service {
             //stopSelf();
         }else if (command == CMD_SEND_RANDOM_ID){
             notificationDecorator.displaySimpleNotification("ChatService Received:", (String) data.get(RANDOM_ID));
-            //stopSelf();
         } else {
             Log.w(TAG, "Ignoring Unknown Command! id=" + command);
         }

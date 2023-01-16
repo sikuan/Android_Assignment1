@@ -14,6 +14,8 @@ import android.widget.EditText;
 
 import com.zv.geochat.service.ChatService;
 
+import java.util.Random;
+
 public class ChatActivityFragment extends Fragment {
     private static final String TAG = "ChatActivityFragment";
     static int lastTwoDigitsOfStudentID = 67;
@@ -84,8 +86,9 @@ public class ChatActivityFragment extends Fragment {
             public void onClick(View view) {
                 Snackbar.make(view, "Sending Random ID", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
-                int RandomID = v.generateViewId();
-                sendRandomID(RandomID);
+                Random rand = new Random();
+                int randomInt = rand.nextInt(100);
+                sendRandomID(randomInt);
             }
         });
 
