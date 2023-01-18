@@ -18,8 +18,8 @@ import java.util.Random;
 
 public class ChatActivityFragment extends Fragment {
     private static final String TAG = "ChatActivityFragment";
-    static int lastTwoDigitsOfStudentID = 67;
-    final static int CONNECT_ERROR_67 = lastTwoDigitsOfStudentID;
+    static int lastTwoDigitsOfStudentID = 57;
+    final static int CONNECT_ERROR_57 = lastTwoDigitsOfStudentID;
     EditText edtMessage;
     String userName = "user1";
     public ChatActivityFragment() {
@@ -74,9 +74,9 @@ public class ChatActivityFragment extends Fragment {
         btnSendConnectError.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Sending Connect Error...", Snackbar.LENGTH_LONG)
+                Snackbar.make(view, "Sending Connect Error 57...", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
-                sendConnectError(CONNECT_ERROR_67);
+                sendConnectError(CONNECT_ERROR_57);
             }
         });
 
@@ -140,7 +140,7 @@ public class ChatActivityFragment extends Fragment {
 
     private void sendConnectError(int errorCode){
         String errorMessage = "";
-        if(errorCode == 67){
+        if(errorCode == 57){
             errorMessage = "Connect Error:"+ errorCode;
         }
         Bundle data = new Bundle();
